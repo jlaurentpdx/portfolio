@@ -1,16 +1,20 @@
 const app = document.querySelector(".app");
 
-function toggleFadeInElement(element) {
+function toggleFadeInElement(element, toggle) {
   element.classList.add("transparent");
 
-  let toggle = false;
-
-  element.addEventListener("transitionend", () => {
-    if (this.classList.contains("fade-in")) {
-      toggle;
-    }
-    this.classList.toggle("fade-in");
-  });
+  if (!toggle) {
+    element.addEventListener("transitionend", () => {
+      if (this.classList.contains("fade-in")) {
+        return toggle;
+      }
+      this.classList.toggle("fade-in");
+    });
+  } else {
+    element.classList.add("fade-in");
+    element.classList.remove("transparent");
+    return;
+  }
 }
 
 function createCarousels() {
@@ -57,7 +61,7 @@ function setVisible(selector, visible) {
 const wait = (delay = 0) =>
   new Promise((resolve) => setTimeout(resolve, delay));
 
-toggleFadeInElement(app);
+toggleFadeInElement(app, false);
 setVisible(".app", false);
 setVisible(".loader", true);
 
@@ -66,7 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setVisible(".loader", false);
     setVisible(".app", true);
     createCarousels();
-    app.classList.add("fade-in");
-    app.classList.remove("transparent");
+    toggleFadeInElement(app, true);
   });
 });

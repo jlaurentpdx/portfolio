@@ -53,8 +53,8 @@ body {
   padding: 0;
   min-height: 100vh;
 
-  color: var(--primary-dark);
-  background-color: var(--primary-light);
+  color: var(--primary-light);
+  background-color: var(--primary-dark);
 
   font-family: "EB Garamond", serif;
 }
