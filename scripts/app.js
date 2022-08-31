@@ -1,14 +1,17 @@
 const app = document.querySelector(".app");
-app.classList.add("transparent");
 
-let toggle = false;
+function toggleFadeInElement(element) {
+  element.classList.add("transparent");
 
-app.addEventListener("transitionend", () => {
-  if (this.classList.contains("fade-in")) {
-    toggle;
-  }
-  this.classList.toggle("fade-in");
-});
+  let toggle = false;
+
+  element.addEventListener("transitionend", () => {
+    if (this.classList.contains("fade-in")) {
+      toggle;
+    }
+    this.classList.toggle("fade-in");
+  });
+}
 
 function createCarousels() {
   const carouselList = document.querySelectorAll(".carousel");
@@ -23,9 +26,7 @@ function createCarousels() {
 
     const addCarouselEvents = () => {
       carousel.element.addEventListener("click", () => {
-        const selectedSlide = carousel.element.querySelector(
-          ".flickity-cell.is-selected"
-        );
+        const selectedSlide = carousel.element.querySelector(".is-selected");
 
         const heading = selectedSlide.querySelector(".card__heading");
         const description = selectedSlide.querySelector(".card__description");
@@ -56,6 +57,7 @@ function setVisible(selector, visible) {
 const wait = (delay = 0) =>
   new Promise((resolve) => setTimeout(resolve, delay));
 
+toggleFadeInElement(app);
 setVisible(".app", false);
 setVisible(".loader", true);
 
@@ -65,5 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setVisible(".app", true);
     createCarousels();
     app.classList.add("fade-in");
+    app.classList.remove("transparent");
   });
 });

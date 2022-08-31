@@ -422,6 +422,7 @@ li {
 
 .transparent {
   opacity: 0;
+  pointer-events: none;
 }
 
 .loader {
