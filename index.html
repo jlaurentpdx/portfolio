@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/flickity/css/flickity.css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/landscape.css"
+      media="screen and (orientation: landscape)"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/portrait.css"
+      media="screen and (orientation: portrait)"
+    />
+    <link
+      rel="shortcut icon"
+      href="./public/icons/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Jordan Laurent, Full-stack Software Developer</title>
+  </head>
+
+  <body>
+    <div class="app">
+      <!-------------- NAV || SKIP  -------------->
+      <div class="nav__container">
+        <nav>
+          <a href="#about">About</a>
+          <a href="#development">Development</a>
+          <a href="#projects">Projects</a>
+          <a href="#media">Media</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="nav__icons">
+          <a
+            href="https://github.com/jlaurentpdx"
+            target="_blank"
+            rel="noopener"
+            aria-label="Jordan at GitHub"
+            ><img
+              src="./public/icons/gh_dark.png"
+              alt="jlaurentpdx at GitHub"
+              width="32px"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/jlaurentpdx/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Jordan at LinkedIn"
+            ><img
+              src="./public/icons/li_dark.png"
+              alt="jlaurentpdx at LinkedIn"
+              width="32px"
+          /></a>
+          <address style="display: inline">
+            <a
+              href="mailto:jlaurent.pdx@gmail.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="Jordan via email"
+              ><img
+                src="./public/icons/email_dark.png"
+                alt="send an email to jlaurent.pdx@gmail.com"
+                width="32px"
+            /></a>
+          </address>
+        </div>
+      </div>
+
+      <header>
+        <!-------------- || INTRO -------------->
+        <section id="intro" class="intro__section">
+          <h1>
+            Howdy. I'm
+            <span class="intro__name">Jordan</span>
+          </h1>
+        </section>
+        <p class="intro__opening">
+          — a
+          <span class="accent-text">full-stack software developer</span>,
+          <span class="accent-text">multimedia artist</span>, and
+          <span class="accent-text">educator</span> in Portland, Oregon making
+          people-first, user-friendly tools and technology with an emphasis on
+          design, inclusivity, and accessibility.
+        </p>
+        <figure class="intro__figure">
+          <img src="./public/images/intro.jpg" alt=" " width="200px" />
+        </figure>
+      </header>
+
+      <hr />
+      <main>
+        <!-------------- || ABOUT -------------->
+        <section id="about">
+          <h2>About</h2>
+          <article>
+            <p>
+              Since being introduced to
+              <a
+                href="https://openprocessing.org/browse/#"
+                target="_blank"
+                rel="noopener"
+                >creative coding</a
+              >
+              in 2016, I've ventured into using code as my medium to engage
+              myself and others in exploration, expression, and meaningful
+              learning experiences.
+            </p>
+            <p>
+              My connection to the people in my communities and the places I
+              live drive every aspect of my work, from personal and
+              collaborative projects in open-source to
+              <a
+                href="https://www.instagram.com/crisiskitchenpdx/"
+                target="_blank"
+                rel="noopener"
+                >mutual aid</a
+              >,
+              <a
+                href="https://rahabs-sisters.org/"
+                target="_blank"
+                rel="noopener"
+                >volunteerism</a
+              >,
+              <a
+                href="https://www.instagram.com/p/CCcdmKXhMnT/"
+                target="_blank"
+                rel="noopener"
+                >workshops</a
+              >, and
+              <a
+                href="https://francescafr.github.io/PCC2018/2018/"
+                target="_blank"
+                rel="noopener"
+                >mentoring</a
+              >. Read on to learn more.
+            </p>
+          </article>
+        </section>
+
+        <!-------------- || DEVELOPMENT -------------->
+        <section id="development">
+          <h2>Development</h2>
+          <article>
+            <p>
+              Built with languages, libraries, and frameworks including
+              <span class="accent-text">React</span>,
+              <span class="accent-text">ES6</span>,
+              <span class="accent-text">Express</span>,
+              <span class="accent-text">Node</span>,
+              <span class="accent-text">PostgreSQL</span>,
+              <span class="accent-text">Supabase</span>,
+              <span class="accent-text">Tone.js</span>, and
+              <span class="accent-text">Mapbox</span>, the applications on
+              display below highlight just a few of the open-source works I've
+              been a part of developing, deploying, and contributing to.
+            </p>
+            <p>
+              More info on each app can be found by tapping on the slides below,
+              or you can check them out for yourself by following the links
+              provided to the
+              <a
+                href="https://github.com/jlaurentpdx"
+                target="_blank"
+                rel="noopener"
+                >frontend repos on Github</a
+              >
+              and live deploys hosted on Netlify.
+            </p>
+          </article>
+
+          <!-------------- || DEVELOPMENT LIST  -------------->
+          <ul id="dev-carousel" class="carousel">
+            <!-------------- || GEO TONE  -------------->
+            <li id="geo-tone" class="carousel__card" aria-label="geo-tone">
+              <img src="./public/gifs/geotone.gif" alt=" " width="200px" />
+              <div class="card__wrapper">
+                <div class="card__heading">
+                  <h3 class="card__title">Geo Tone</h3>
+                  <div class="card__link">
+                    <img
+                      src="./public/icons/ntlf_light.png"
+                      alt=" "
+                      width="16px"
+                    />
+                    <a
+                      href="https://geo-tone.netlify.app/"
+                      target="_blank"
+                      rel="noopener"
+                      >Deployed Site</a
+                    >
+                  </div>
+                  <div class="card__link">
+                    <img
+                      src="./public/icons/gh_light.png"
+                      alt=" "
+                      width="16px"
+                    />
+                    <a
+                      href="https://github.com/geo-tone/geo-tone-frontend"
+                      target="_blank"
+                      rel="noopener"
+                      >Frontend Repo</a
+                    >
+                  </div>
+                </div>
+                <p class="card__description hidden">
+                  <span class="description__title">Geo Tone</span> is an audio
+                  sequencer made for the browser with user creativity and
+                  accessibility in mind. Built with React 18, Tone.js, and
+                  Framer Motion on the front-end and a custom back-end with
+                  Express and Node.
+                </p>
+              </div>
+            </li>
+
+            <!-------------- || FRIENDS.MAP()  -------------->
+            <li
+              id="friends-dot-map"
+              class="carousel__card"
+              aria-label="friends-dot-map"
+            >
+              <img src="./public/gifs/friends.gif" alt=" " width="200px" />
+              <div class="card__wrapper">
+                <div class="card__heading">
+                  <h3 class="card__title">friends. map()</h3>
+                  <div class="card__link">
+                    <img
+                      src="./public/icons/ntlf_light.png"
+                      alt=" "
+                      width="16px"
+                    />
+                    <a
+                      href="https://geo-tone.netlify.app/"
+                      target="_blank"
+                      rel="noopener"
+                      >Deployed Site</a
+                    >
+                  </div>
+                  <div class="card__link">
+                    <img
+                      src="./public/icons/gh_light.png"
+                      alt=" "
+                      width="16px"
+                    />
+                    <a
+                      href="https://github.com/geo-tone/geo-tone-frontend"
+                      target="_blank"
+                      rel="noopener"
+                      >Frontend Repo</a
+                    >
+                  </div>
+                </div>
+                <p class="card__description hidden">
+                  <span class="description__title">friends (dot) map</span> is a
+                  convenient travel companion for keeping small groups and
+                  travel parties up-to-date with real-time status updates and
+                  geolocation. Uses React 17, Mapbox, Tailwind CSS, and Supabase
+                  with WebSockets.
+                </p>
+              </div>
+            </li>
+
+            <!-------------- || SCROUNGER  -------------->
+            <li id="scrounger" class="carousel__card" aria-label="scrounger">
+              <div class="card__wrapper">
+                <div class="card__heading">
+                  <h3 class="card__title">Scrounger</h3>
+                  <div class="card__link">
+                    <img
+                      src="./public/icons/ntlf_light.png"
+                      alt=" "
+                      width="16px"
+                    />
+                    <a
+                      href="https://geo-tone.netlify.app/"
+                      target="_blank"
+                      rel="noopener"
+                      >Deployed Site</a
+                    >
+                  </div>
+                  <div class="card__link">
+                    <img
+                      src="./public/icons/gh_light.png"
+                      alt=" "
+                      width="16px"
+                    />
+                    <a
+                      href="https://github.com/geo-tone/geo-tone-frontend"
+                      target="_blank"
+                      rel="noopener"
+                      >Frontend Repo</a
+                    >
+                  </div>
+                </div>
+                <p class="card__description hidden">
+                  Portland, Oregon has many sights to see, and
+                  <span class="description__title">Scrounger</span> puts them in
+                  the palm of your hand. Choose an adventure, follow the hints
+                  provided, and check out that view! Made with React 17,
+                  Supabase, and a love of exploration.
+                </p>
+              </div>
+              <img src="./public/gifs/scrounger.gif" alt=" " width="200px" />
+            </li>
+
+            <!-------------- || SPROUT  -------------->
+            <li id="sprout" class="carousel__card" aria-label="sprout">
+              <div class="card__wrapper">
+                <div class="card__heading">
+                  <h3 class="card__title">Sprout</h3>
+                  <div class="card__link">
+                    <img
+                      src="./public/icons/ntlf_light.png"
+                      alt=" "
+                      width="16px"
+                    />
+                    <a
+                      href="https://geo-tone.netlify.app/"
+                      target="_blank"
+                      rel="noopener"
+                      >Deployed Site</a
+                    >
+                  </div>
+                  <div class="card__link">
+                    <img
+                      src="./public/icons/gh_light.png"
+                      alt=" "
+                      width="16px"
+                    />
+                    <a
+                      href="https://github.com/geo-tone/geo-tone-frontend"
+                      target="_blank"
+                      rel="noopener"
+                      >Frontend Repo</a
+                    >
+                  </div>
+                </div>
+                <p class="card__description hidden">
+                  <span class="description__title">Sprout</span> makes it easy
+                  to be a proud new plant parent. Browse a list of
+                  beginner-friendly houseplants, then build your budding
+                  relationship with our plant-specific caretaking guide. Made
+                  mobile-first, desktop-responsive with JavaScript, CSS, and
+                  HTML.
+                </p>
+              </div>
+              <img src="./public/gifs/sprout.gif" alt=" " width="200px" />
+            </li>
+          </ul>
+        </section>
+
+        <!-------------- || PROJECTS  -------------->
+        <section id="projects">
+          <h2>Projects</h2>
+          <article>
+            <p>
+              From musicianship and audio programming to microelectronics and
+              video game development, I've taken on roles across disciplines to
+              create, learn, and share my knowledge with students and learners
+              everywhere. Below, you can explore links and information about the
+              courses and workshops I've taught locally in Portland and remotely
+              to students across the US, multimedia installations I've
+              collaborated on, and more.
+            </p>
+          </article>
+
+          <!-------------- || PROJECTS LIST  -------------->
+          <ul id="project-carousel" class="carousel">
+            <!-------------- || PROJECT 0  -------------->
+            <li id="project-zero" class="carousel__card" aria-label="project 0">
+              <div class="card__wrapper">
+                <div class="card__heading">
+                  <h3 class="card__title">Project 0</h3>
+
+                  <p class="card__detail">
+                    June 9-10, 2018<br />@ Disjecta <br />
+                    Portland, OR
+                  </p>
+
+                  <div class="card__link">
+                    <img
+                      src="./public/icons/youtube_light.png"
+                      alt="Project 0 on YouTube"
+                      width="16px"
+                    />
+                    <a
+                      href="https://www.youtube.com/watch?v=DwP0MY2JERw"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      Watch on YouTube</a
+                    >
+                  </div>
+                </div>
+                <p class="card__description hidden">
+                  <span class="description__title"
+                    >[description coming soon!]</span
+                  >
+                </p>
+              </div>
+
+              <img src="./public/images/project0.jpg" alt=" " width="200px" />
+            </li>
+
+            <!-------------- || BODY IMAGE LIMITED  -------------->
+            <li
+              id="body-image-ltd"
+              class="carousel__card"
+              aria-label="body image limited"
+            >
+              <div class="card__wrapper">
+                <div class="card__heading">
+                  <h3 class="card__title">Body Image Ltd.</h3>
+
+                  <p class="card__detail">
+                    June 14, 2019<br />@ PICA <br />
+                    Portland, OR
+                  </p>
+
+                  <div class="card__link">
+                    <img
+                      src="./public/icons/vimeo_light.png"
+                      alt=" "
+                      width="16px"
+                    />
+                    <a
+                      href="https://vimeo.com/343060247?embedded=true&source=video_title&owner=82329506"
+                      target="_blank"
+                      rel="noopener"
+                      >Watch on Vimeo
+                    </a>
+                  </div>
+                </div>
+                <p class="card__description hidden">
+                  <span class="description__title"
+                    >[description coming soon!]</span
+                  >
+                </p>
+              </div>
+
+              <img
+                src="./public/images/body-image-ltd.jpg"
+                alt=" "
+                width="200px"
+              />
+            </li>
+
+            <!-------------- || BEGINNING MAKER TECH  -------------->
+            <li
+              id="beginning-maker-tech"
+              class="carousel__card"
+              aria-label="beginning maker tech"
+            >
+              <div class="card__wrapper">
+                <div class="card__heading">
+                  <h3 class="card__title">Beginning Maker Tech</h3>
+
+                  <div class="card__link">
+                    <img
+                      src="./public/icons/gh_light.png"
+                      alt=" "
+                      width="16px"
+                    />
+                    <a
+                      href="https://jlaurentpdx.github.io/beginning-maker-tech/"
+                      target="_blank"
+                      rel="noopener"
+                      >Github Pages</a
+                    >
+                  </div>
+                </div>
+                <p class="card__description hidden">
+                  Taught from January to March 2019,
+                  <span class="description__title"
+                    >Beginning Maker Techniques and Technologies</span
+                  >
+                  introduced students to programming and microelectronics with
+                  the Arduino, CNC laser cutting, and graphic design with Adobe
+                  Illustrator.
+                </p>
+              </div>
+              <img src="./public/images/bmtech.jpg" alt=" " width="200px" />
+            </li>
+
+            <!-------------- || PDX OPEN TECH  -------------->
+            <li
+              id="pdx-open-tech"
+              class="carousel__card"
+              aria-label="pdx open tech"
+            >
+              <div class="card__wrapper">
+                <div class="card__heading">
+                  <h3 class="card__title">PDX Open<br />Tech Courses</h3>
+
+                  <div class="card__link">
+                    <a
+                      href="https://pdxopen.tech/"
+                      target="_blank"
+                      rel="noopener"
+                      >Homepage</a
+                    >
+                  </div>
+                </div>
+                <p class="card__description hidden">
+                  <span class="description__title">PDX Open Tech</span> provides
+                  an online hub for free, open-source learning. Contributions
+                  include curriculum and assets for 10-week courses on
+                  <span class="description__highlight"
+                    >2D Game Art and Animation</span
+                  >
+                  and
+                  <span class="description__highlight">Game Audio Design</span>.
+                </p>
+              </div>
+
+              <img
+                src="./public/images/pdxopentech.jpg"
+                alt=" "
+                width="200px"
+              />
+            </li>
+          </ul>
+        </section>
+
+        <!-------------- || MEDIA -------------->
+        <section id="media">
+          <h2>Media</h2>
+          <article>
+            <p>
+              My experience as an artist continues to develop with my work on
+              the web. If you're interested in learning about my winding path
+              from music and education to code, I gave a
+              <a
+                href="https://www.youtube.com/watch?v=u76CKtRjgq0"
+                target="_blank"
+                rel="noopener"
+                >2022 tech talk</a
+              >
+              on how making music led me to pursue a future in code in
+              collaboration with
+              <a
+                href="https://the-collab-lab.codes/"
+                target="_blank"
+                rel="noopener"
+                >The Collab Lab</a
+              >, which you can view below.
+            </p>
+          </article>
+          <figure>
+            <iframe
+              width="480"
+              height="240"
+              src="https://www.youtube-nocookie.com/embed/u76CKtRjgq0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </figure>
+        </section>
+      </main>
+
+      <footer>
+        <!-------------- || CONTACT -------------->
+        <section id="contact" class="contact__section">
+          <h2>Let's keep in touch</h2>
+
+          <article class="contact__description">
+            You can find me on
+            <a
+              href="https://www.linkedin.com/in/jlaurentpdx/"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >, check out my open-source projects and contributions on
+            <a
+              href="https://github.com/jlaurentpdx"
+              target="_blank"
+              rel="noopener"
+              >GitHub</a
+            >, or email me any time at
+            <address>
+              <a
+                href="mailto:jlaurent.pdx@gmail.com"
+                target="_blank"
+                rel="noopener"
+                >jlaurent.pdx@gmail.com</a
+              >.
+            </address>
+          </article>
+          <div class="contact__icons">
+            <a
+              href="https://github.com/jlaurentpdx"
+              target="_blank"
+              rel="noopener"
+              aria-label="Jordan at GitHub"
+              ><img
+                src="./public/icons/gh_light.png"
+                alt="jlaurentpdx at GitHub"
+                width="32px"
+            /></a>
+            <a
+              href="https://www.linkedin.com/in/jlaurentpdx/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Jordan at LinkedIn"
+              ><img
+                src="./public/icons/li_light.png"
+                alt="jlaurentpdx at LinkedIn"
+                width="32px"
+            /></a>
+            <address style="display: inline">
+              <a
+                href="mailto:jlaurent.pdx@gmail.com"
+                target="_blank"
+                rel="noopener"
+                aria-label="Jordan via email"
+                ><img
+                  src="./public/icons/email_light.png"
+                  alt="send an email to jlaurent.pdx@gmail.com"
+                  width="32px"
+              /></a>
+            </address>
+          </div>
+        </section>
+      </footer>
+    </div>
+    <div class="loader">
+      <div class="loader__container">
+        <div class="loader__dot dot__a"></div>
+        <div class="loader__dot dot__b"></div>
+        <div class="loader__dot dot__c"></div>
+      </div>
+    </div>
+    <script src="./node_modules/flickity/dist/flickity.pkgd.js"></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>

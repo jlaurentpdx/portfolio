@@ -1,0 +1,510 @@
+:root {
+  --seashell: #f7ede8;
+  --misty-rose: #f8dad3;
+  --camel: #c89d79;
+  --candy-pink: #e17f85;
+  --paradise-pink: #ee3f73;
+  --dark-sienna: #4b111a;
+  --xiketic: #1a0002;
+
+  --primary-accent: var(--candy-pink);
+  --primary-light: var(--misty-rose);
+  --primary-dark: var(--xiketic);
+
+  --secondary-accent: var(--paradise-pink);
+  --secondary-light: var(--seashell);
+  --secondary-dark: var(--camel);
+  --secondary-accent-dark: var(--dark-sienna);
+
+  --min-item-size: 160px;
+  --max-item-size: 720px;
+
+  --v-spacing: clamp(10px, 3%, 60px);
+  --h-spacing: clamp(10px, 3%, 60px);
+}
+
+@keyframes spinner-dot {
+  0%,
+  100% {
+    transform: scale(0.2);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ||=========== FLOW ELEMENTS =========== */
+
+html {
+  margin: 0;
+  padding: 0;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  color: var(--primary-dark);
+  background-color: var(--primary-light);
+
+  font-family: "EB Garamond", serif;
+}
+
+header {
+  height: clamp(var(--min-item-size), 100vh, calc(var(--max-item-size) * 2));
+  width: 100%;
+  z-index: 2;
+
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary-dark),
+    var(--primary-dark) 50%,
+    var(--primary-light) 50%,
+    var(--primary-light)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 1fr 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--v-spacing);
+
+  padding-top: var(--v-spacing);
+  padding-bottom: calc(var(--v-spacing) * 2);
+
+  background-color: var(--primary-light);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  background-color: var(--primary-dark);
+}
+
+section {
+  max-width: 60rem;
+
+  margin-top: var(--v-spacing);
+  margin-bottom: var(--v-spacing);
+  padding-top: var(--v-spacing);
+  padding-bottom: var(--v-spacing);
+  margin-inline: 10%;
+
+  border-radius: 40px;
+  border-top-left-radius: 0;
+
+  color: var(--secondary-accent-dark);
+  background-color: var(--secondary-light);
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: var(--v-spacing);
+  margin-bottom: var(--v-spacing);
+
+  margin-inline: 12%;
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+li {
+  /* This sets carousel__card elements as containers for card__wrappers with lowest specificity,
+  preventing the cards from appearing broken when JavaScript is disabled */
+  position: relative;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.app.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.nav__container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+
+  background: var(--secondary-light);
+  box-shadow: 0 10px 15px 0 var(--primary-dark);
+}
+
+/* ||=========== CONTENT ELEMENTS: GENERIC =========== */
+
+nav > a,
+nav > a:visited {
+  margin: 10px;
+
+  color: var(--secondary-accent-dark);
+  font-size: clamp(1rem, 2vw, 2rem);
+
+  text-transform: lowercase;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: var(--v-spacing);
+  margin-bottom: var(--v-spacing);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+section > h1 {
+  margin-inline: 5%;
+
+  font-size: clamp(2rem, 7vw, 5rem);
+  color: var(--primary-light);
+}
+
+section > h2 {
+  margin-inline: 5%;
+  width: 100%;
+
+  color: var(--secondary-dark);
+
+  font-size: clamp(2rem, 5vw, 4rem);
+  text-transform: lowercase;
+}
+
+hr {
+  width: 25%;
+
+  border-color: var(--secondary-dark);
+  border-style: dashed;
+  border-width: 1px;
+}
+
+main > section {
+  box-shadow: 1vw 1vw 0 1px var(--primary-accent);
+}
+
+a,
+a:visited {
+  color: inherit;
+  font: inherit;
+}
+
+p > a,
+p > a:visited {
+  color: var(--secondary-accent);
+}
+
+address,
+address > * {
+  display: inline;
+  font: inherit;
+}
+
+figure > img {
+  margin: var(--h-spacing);
+  border-radius: 20px;
+}
+
+figure > iframe {
+  margin: var(--h-spacing);
+  aspect-ratio: 16 / 9;
+  width: 70%;
+  height: auto;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ||=========== CONTENT ELEMENTS: CLASSES =========== */
+
+.accent-text {
+  color: var(--secondary-accent);
+}
+
+.nav__icons {
+  font-size: 0;
+  margin: 5px;
+}
+
+.nav__icons > * {
+  margin-inline: var(--h-spacing);
+}
+
+.intro__section {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  box-shadow: none;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.intro__name {
+  display: block;
+  padding: 0;
+
+  color: var(--primary-accent);
+  font-size: clamp(3rem, 10vw, 8rem);
+}
+
+.intro__opening {
+  font-size: clamp(1rem, 3vw, 2rem);
+  margin-inline: 15%;
+  color: var(--secondary-accent-dark);
+}
+
+.intro__figure {
+  height: 100%;
+  grid-row: 1 / 4;
+  grid-column: 2 / 3;
+
+  display: flex;
+  align-items: center;
+}
+
+.intro__figure > img {
+  width: clamp(var(--min-item-size), 100%, var(--max-item-size));
+
+  margin: auto;
+  padding: 1vh;
+
+  border-radius: 50%;
+}
+
+/* .carousel__card {
+  position: relative;
+} */
+
+.carousel__card > img {
+  width: 85%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  padding: 3vh;
+  border-radius: 40px;
+}
+
+.card__wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--secondary-light);
+}
+
+.card__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1vh;
+  width: 75%;
+  padding: 5%;
+
+  border-radius: 5px;
+}
+
+.card__title {
+  font-size: clamp(1.7rem, 5vw, 4rem);
+}
+
+.card__link,
+.card__detail {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+.card__link img {
+  width: clamp(1rem, 5vw, 2rem);
+  height: clamp(1rem, 5vw, 2rem);
+}
+
+.card__description {
+  margin-inline: 15%;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: clamp(1rem, 3vw, 2.5rem);
+}
+
+.description__title {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contact__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+
+  border-radius: 0;
+
+  color: var(--primary-light);
+  background-color: var(--primary-dark);
+}
+
+.contact__section > h2 {
+  margin: var(--v-spacing);
+  width: fit-content;
+}
+
+.contact__description {
+  display: block;
+  margin-inline: 10%;
+}
+
+.contact__icons {
+  font-size: 0;
+  margin: var(--v-spacing);
+}
+
+.contact__icons > * {
+  margin: var(--h-spacing);
+}
+
+.hidden {
+  display: none;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.loader {
+  display: none;
+  width: 100%;
+  height: 100vh;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--primary-light);
+}
+
+.loader__container {
+  width: 150px;
+  height: 150px;
+
+  color: var(--primary-dark);
+  background: var(--secondary-light);
+
+  clip-path: polygon(0% 0%, 0% 100%, 86% 50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.loader__dot {
+  width: 15px;
+  height: 15px;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: var(--secondary-accent);
+}
+
+.dot__a {
+  animation: spinner-dot 1s -0.33s ease-out infinite;
+}
+
+.dot__b {
+  animation: spinner-dot 1s -0.17s ease-out infinite;
+}
+
+.dot__c {
+  animation: spinner-dot 1s ease-out infinite;
+}
+
+/* ||=========== FLICKITY OPTIONS =========== */
+
+.carousel {
+  width: 90%;
+  height: fit-content;
+
+  margin: auto;
+
+  list-style: none;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.carousel::after {
+  content: "flickity";
+  display: none;
+}
+
+.flickity-button {
+  color: var(--secondary-light);
+  background-color: var(--secondary-accent);
+  width: clamp(25px, 5vw, 60px);
+  height: clamp(25px, 5vw, 60px);
+}
+
+.flickity-button:hover {
+  color: var(--secondary-accent);
+  background-color: var(--secondary-light);
+}
+
+.flickity-button:focus {
+  box-shadow: 0 0 0 5px #19f;
+}
+
+.flickity-page-dots {
+  width: 100%;
+  padding-left: 0;
+  bottom: 0;
+}
