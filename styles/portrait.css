@@ -140,7 +140,7 @@ li {
 
 .app.fade-in {
   opacity: 1;
-  transition: opacity 0.5s ease-in;
+  transition: opacity 1.5s ease-out;
 }
 
 .nav__container {
@@ -211,7 +211,7 @@ figure > img {
 
 figure > iframe {
   margin: var(--h-spacing);
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
   width: 70%;
   height: auto;
 }
@@ -407,7 +407,7 @@ li {
   height: 15px;
   margin: 10px;
   border-radius: 50%;
-  background-color: var(--secondary-accent);
+  background-color: var(--primary-accent);
 }
 
 .dot__a {
